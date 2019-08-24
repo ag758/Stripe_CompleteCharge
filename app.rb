@@ -1,4 +1,3 @@
-
 #1
 require 'sinatra'
 require 'stripe'
@@ -15,7 +14,7 @@ get '/' do
 end
 
 #4
-post '/charge' do
+post '/charger' do
   #5
   payload = params
   if request.content_type.include? 'application/json' and params.empty?
