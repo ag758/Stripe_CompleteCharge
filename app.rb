@@ -14,7 +14,7 @@ get '/' do
 end
 
 #4
-post '/charger' do
+post '/charge' do
   #5
   payload = params
   if request.content_type.include? 'application/json' and params.empty?
