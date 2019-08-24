@@ -1,7 +1,4 @@
-
-
-
-  #1
+#1
 require 'sinatra'
 require 'stripe'
 require 'json'
@@ -9,15 +6,12 @@ require 'json'
 #2
 Stripe.api_key = 'sk_test_P3L8z4RiuGDIVsXHxY7gTTEt00wPgWnwdJ'
 
-class App < Sinatra::base
 #3
 get '/' do
   status 200
   return "RWPuppies back end has been set up correctly"
 end
-end
 
-class App2 < Sinatra::base
 #4
 post '/charge' do
   #5
@@ -43,6 +37,5 @@ post '/charge' do
   status 200
   return "Charge successfully created"
 
-end
 end
 
