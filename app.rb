@@ -1,12 +1,13 @@
-#1
-require 'sinatra'
-require 'stripe'
-require 'json'
-
-#2
-Stripe.api_key = 'sk_test_P3L8z4RiuGDIVsXHxY7gTTEt00wPgWnwdJ'
-
 class App < Sinatra::Base
+  #1
+  require 'sinatra'
+  require 'stripe'
+  require 'json'
+
+  #2
+  Stripe.api_key = 'sk_test_P3L8z4RiuGDIVsXHxY7gTTEt00wPgWnwdJ'
+
+
   #3
   get '/' do
     status 200
