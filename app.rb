@@ -6,11 +6,10 @@ require 'sinatra'
 require 'stripe'
 require 'json'
 
-class App < Sinatra::base
-
 #2
 Stripe.api_key = 'sk_test_P3L8z4RiuGDIVsXHxY7gTTEt00wPgWnwdJ'
 
+class App < Sinatra::base
 #3
 get '/' do
   status 200
