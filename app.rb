@@ -15,7 +15,9 @@ get '/' do
   status 200
   return "RWPuppies back end has been set up correctly"
 end
+end
 
+class App2 < Sinatra::base
 #4
 post '/charge' do
   #5
