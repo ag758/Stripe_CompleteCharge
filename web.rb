@@ -8,7 +8,7 @@ Stripe.api_key = 'sk_test_P3L8z4RiuGDIVsXHxY7gTTEt00wPgWnwdJ'
 #3
 get '/' do
     status 200
-    return "RWPuppies back end has been set up correctly"
+    return "TicketHawk backend has been set up correctly"
 end
 
 #4
