@@ -28,7 +28,7 @@ post '/charge' do
                                        :description => payload[:description],
                                        
                                        :transfer_data[:destination.to_s] => payload[:account_id],
-                                       :transfer_data[:amount.to_s] => payload[:application_fee_amount]
+                                       :transfer_data[:amount.to_s] => payload[:amount] - payload[:application_fee_amount]
                                        
                                        
                                        )
