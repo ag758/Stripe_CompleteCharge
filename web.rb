@@ -27,7 +27,8 @@ post '/charge' do
                                        :source => payload[:token],
                                        :description => payload[:description],
                                        
-                                       
+                                       :transfer_data[:destination.to_s] => payload[:account_id],
+                                       :application_fee_amount => payload[:application_fee_amount]
                                        
                                        
                                        )
