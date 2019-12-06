@@ -25,7 +25,12 @@ post '/charge' do
                                        :amount => payload[:amount],
                                        :currency => payload[:currency],
                                        :source => payload[:token],
-                                       :description => payload[:description]
+                                       :description => payload[:description],
+                                       
+                                       :transfer_data[:destination.to_s] => payload[:account_id],
+                                       :application_fee_amount => payload[:application_fee_amount]
+                                       
+                                       
                                        )
                                        #7
                                        rescue Stripe::StripeError => e
