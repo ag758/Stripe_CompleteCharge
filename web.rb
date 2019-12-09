@@ -28,9 +28,10 @@ post '/charge' do
                                        currency: payload[:currency],
                                        source: payload[:token],
                                        description: payload[:description],
+                                       application_fee_amount: payload[:application_fee_amount],
                                        
                                        transfer_data: {
-                                       amount: payload[:application_fee_amount],
+                                      
                                        destination: payload[:account_id]
                                        
                                        }
