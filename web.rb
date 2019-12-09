@@ -21,21 +21,29 @@ post '/charge' do
     
     begin
         #6
+        
         charge = Stripe::Charge.create(
-                                       :amount => payload[:amount],
-                                       :currency => payload[:currency],
-                                       :source => payload[:token],
-                                       :description => payload[:description],
+                                       {
+                                       amount: payload[:amount],
+                                       currency: payload[:currency],
+                                       source: payload[:token],
+                                       description: payload[:description],
                                        
-                                       :transfer_data[:destination.to_s] => payload[:account_id],
-                                       :transfer_data[:amount.to_s] => payload[:application_fee_amount]
+                                       transfer_data: {
+                                       amount: payload[:application_fee_amount],
+                                       destination: payload[:account_id]
                                        
+                                       }
                                        
+                                       }
                                        )
                                        #7
                                        rescue Stripe::StripeError => e
                                        status 402
                                        return "Error creating charge: #{e.message}"
+        
+        
+        
     end
     #8
     status 200
