@@ -3,7 +3,7 @@ require 'stripe'
 require 'json'
 
 #2
-Stripe.api_key = 'sk_live_Uzg5XubmD84VMDC1uLEcINwg00zyaIxk9r'
+Stripe.api_key = 'sk_live_7v1Thn70apq6G0XBCq4iAQSE00BJOqBkkl'
 
 #3
 get '/' do
